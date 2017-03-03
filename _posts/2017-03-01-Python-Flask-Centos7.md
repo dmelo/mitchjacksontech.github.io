@@ -3,6 +3,11 @@ layout: post
 title: Flask deployment antics with CentOS7
 ---
 
+NOTE!
+This was a waste of time... if this topic interests you, look to my next post
+/NOTE!
+
+
 No better time to start a github blog than while waiting for python to compile from source on a new linode instance.
 
 My first shot at deploying my pet project flask-python app to my production vps was discouraging.
