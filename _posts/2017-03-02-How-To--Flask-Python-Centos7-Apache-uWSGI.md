@@ -3,7 +3,6 @@ layout: post
 title: How To Flask, Python, Centos7, Apache, uWSGI
 ---
 
-# How To: Flask, Python, CentOS7, Apache and uWSGI
 Following is a walk-through for deploying a simple python-flask application with Linux Centos7, apache, virtualenv and uWSGI
 
 
