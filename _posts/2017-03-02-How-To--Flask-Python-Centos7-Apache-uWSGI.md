@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How To: Flask, Python, Centos7, Apache, uWSGI
+title: How To Flask, Python, Centos7, Apache, uWSGI
 ---
 
 # How To: Flask, Python, CentOS7, Apache and uWSGI
