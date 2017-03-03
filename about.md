@@ -4,12 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Here you've found an old-school do-it-all-with-a-shoestring-and-superglue developer trying to become accustomed to the new social internet of tech.  I spend time executing projects in new languages with new tools.  Still perl is my true love.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Perhaps I'll do something with this github contraption.
+Perhaps not.
