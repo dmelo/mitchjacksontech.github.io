@@ -19,7 +19,7 @@ avatar: https://avatars2.githubusercontent.com/u/16674329?v=3&s=460
 footer-links:
   dribbble:
   email:
-  facebook:
+  facebook: mitchjacksontech
   flickr:
   github: mitchjacksontech
   instagram:
@@ -37,7 +37,7 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-89979076-2
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
