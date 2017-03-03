@@ -34,7 +34,6 @@ This isn't necessary, but you should never spin up a linux instance and not secu
 ```
 # Appropriate values should be plugged in here
 export WHITELIST_IPADDR=0.0.0.0
-export MARIADB_ROOT_PASSWORD=listen_to_sneakerpimps
 
 
 # Lock down the firewall immediately
@@ -58,12 +57,7 @@ firewall-cmd --zone=public --remove-service=ssh --permanent
 yum -y update
 yum -y install epel-release
 yum -y install \
-    exim \
     httpd \
-    mailx \
-    mariadb \
-    mariadb-server \
-    nano \
     psacct
 yum clean all
 
@@ -80,39 +74,6 @@ sed -i 's/^#?TCPKeepAlive yes/TCPKeepAlive no/' /etc/ssh/sshd_config
 sed -i 's/^#?UseDNS yes/UseDNS no/' /etc/ssh/sshd_config
 sed -i 's/^#?X11Forwarding yes/X11Forwarding no/' /etc/ssh/sshd_config
 sed -i 's/^#?AllowAgentForwarding yes/AllowAgentForwarding no/' /etc/ssh/sshd_config
-
-
-# Deploy a login banner
-cat << EOF >> /etc/issue
-###############################################################
-#                [waste of space]                             #
-#      All connections are monitored and recorded             #
-# Disconnect IMMEDIATELY if you are not an authorized user!   #
-###############################################################
-EOF
-cp /etc/issue /etc/issue.net
-
-systemctl reload sshd
-
-
-# Configure exim for outgoing mail delivery for local apps
-# (your SPF records should be set)
-sed -i 's/= @ :/= /' /etc/exim/exim.conf
-alternatives --set mta /usr/sbin/sendmail.exim
-systemctl enable exim
-systemctl start exim
-
-
-
-# Configure mariadb
-systemctl enable mariadb
-systemctl start mariadb
-mysql -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
-mysql -e "DELETE FROM mysql.user WHERE User='';"
-mysql -e "DROP DATABASE test;"
-mysql -e "UPDATE mysql.user SET Password=PASSWORD('$MARIADB_ROOT_PASSWORD') WHERE User='root';"
-mysql -e "FLUSH PRIVILEGES;"
-
 
 ```
 
