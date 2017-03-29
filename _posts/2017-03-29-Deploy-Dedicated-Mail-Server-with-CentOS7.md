@@ -2,7 +2,6 @@
 layout: post
 title: Deploy a Dedicated E-Mail Server with CentOS 7
 ---
-# Exim (SMTP), Dovecot (IMAP,POP3), Centos 7
 This guide will help you configure an E-Mail server for your domain.  The configuration choices made here are appropriate for a smaller user base.  
 
 This guide is a bit exhaustive.  We're going to cover purchasing a dedicated cloud server, DNS configuration, securing the server, configuration of the server, and spam protection. We optionally cover servicing mail for multiple domain names from one server.
